@@ -1,0 +1,14 @@
+import org.junit.jupiter.api.Test;
+
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+
+public class DiscordTests {
+    @Test
+    void successfulSearchTest() {
+        open("https://discord.com/login");
+        $("[name=email]").setValue("soul.light.sario@gmail.com");
+        $("[name='password']").setValue("ekwkwwk").pressEnter();
+    }
+}
